@@ -4,6 +4,7 @@
 (require 'bbdb)
 (require 'fortune)
 (require 'generic-x)
+(require 'haskell-mode-autoloads)
 
 ;; Some Settings
 (cond (window-system (mwheel-install)))
