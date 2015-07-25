@@ -69,3 +69,9 @@ Uses `current-date-time-format' for the formatting the date/time."
   "insert the current time (1-week scope) into the current buffer."
   (interactive)
   (insert (format-time-string current-time-format (current-time))))
+
+(defun unhex-url (start end)
+  (interactive "r")
+  (save-excursion
+    (let ((text (delete-and-extract-region start end)))
+      (insert (url-unhex-string text)))))
