@@ -5,6 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(c-default-style (quote ((c-mode . "k&r") (c++-mode . "k&r") (java-mode . "java") (awk-mode . "awk") (other . "gnu"))))
  '(epg-debug nil)
+ '(haskell-mode-hook (quote (turn-on-haskell-indent)))
  '(ibuffer-display-summary nil)
  '(ibuffer-formats (quote ((mark modified read-only " " (name 18 18 :left :elide) " " (size 9 -1 :right) " " (mode 16 16 :right :elide) " " filename) (mark " " (name 16 -1) " " filename))))
  '(ibuffer-saved-filter-groups nil)
