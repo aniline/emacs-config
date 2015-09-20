@@ -85,6 +85,7 @@
  div#text-footnotes { margin-bottom: 1em; }
  h2.footnotes { margin-bottom: 0.25em; }
 
+ h2 { border-top: 1px solid #C80; }
 /*]]>*/--> 
 </style>
 ")

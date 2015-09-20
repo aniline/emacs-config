@@ -6,6 +6,7 @@
 (require 'generic-x)
 (require 'haskell-mode-autoloads)
 (require 'groovy-mode)
+(require 'gtags)
 
 ;; Some Settings
 (cond (window-system (mwheel-install)))
