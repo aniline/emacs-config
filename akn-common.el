@@ -5,6 +5,7 @@
 (require 'fortune)
 (require 'generic-x)
 (require 'haskell-mode-autoloads)
+(require 'groovy-mode)
 
 ;; Some Settings
 (cond (window-system (mwheel-install)))

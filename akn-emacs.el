@@ -7,6 +7,7 @@
 (add-to-list 'load-path akn-config-dir)
 (add-to-list 'load-path "~/src/elisp")
 (add-to-list 'load-path "~/src/elisp/haskell-mode")
+(add-to-list 'load-path "~/src/elisp/Emacs-Groovy-Mode")
 
 ;; Set constants and machine stuff
 (setq akn-host-specific-file-name (concat "akn-host-" (system-name) ".el"))
