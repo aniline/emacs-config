@@ -5,6 +5,7 @@
 (require 'fortune)
 (require 'generic-x)
 (require 'haskell-mode-autoloads)
+(require 'gtags)
 
 ;; Some Settings
 (cond (window-system (mwheel-install)))

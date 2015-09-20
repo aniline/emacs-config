@@ -22,3 +22,8 @@
 
 (global-set-key (kbd "C-c C-0 C-d") 'insert-current-date-time)
 (global-set-key (kbd "C-c C-0 C-t") 'insert-current-time)
+
+;; GTAGS
+
+(global-set-key (kbd "M-*") 'gtags-pop-stack)
+(global-set-key (kbd "M-.") 'gtags-find-tag)
