@@ -6,7 +6,6 @@
 (require 'muse-wiki)
 (require 'planner)
 (require 'planner-id)
-(require 'remember-planner)
 
 ;; Wiki and Planner Mode stuff
 (setq emacs-wiki-style-sheet "<link rel=\"stylesheet\" type=\"text/css\" href=\"bash.css\" />")

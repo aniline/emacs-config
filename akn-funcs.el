@@ -69,3 +69,7 @@ Uses `current-date-time-format' for the formatting the date/time."
   "insert the current time (1-week scope) into the current buffer."
   (interactive)
   (insert (format-time-string current-time-format (current-time))))
+
+(defun my-org-confirm-babel-evaluate (lang body)
+  (not (string= lang "plantuml")))  ; don't ask for plantuml
+(setq org-confirm-babel-evaluate 'my-org-confirm-babel-evaluate)
