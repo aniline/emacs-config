@@ -73,3 +73,9 @@ Uses `current-date-time-format' for the formatting the date/time."
 (defun my-org-confirm-babel-evaluate (lang body)
   (not (string= lang "plantuml")))  ; don't ask for plantuml
 (setq org-confirm-babel-evaluate 'my-org-confirm-babel-evaluate)
+
+(defun unhex-url (start end)
+  (interactive "r")
+  (save-excursion
+    (let ((text (delete-and-extract-region start end)))
+      (insert (url-unhex-string text)))))
