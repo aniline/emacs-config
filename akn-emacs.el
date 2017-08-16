@@ -8,6 +8,7 @@
 (add-to-list 'load-path "~/src/elisp")
 (add-to-list 'load-path "~/src/elisp/haskell-mode")
 (add-to-list 'load-path "~/src/elisp/Emacs-Groovy-Mode")
+(add-to-list 'load-path "~/src/elisp/rust-mode")
 
 ;; Set constants and machine stuff
 (setq akn-host-specific-file-name (concat "akn-host-" (system-name) ".el"))
@@ -21,10 +22,11 @@
 (load "akn-funcs")
 (load "akn-erc")
 (load "akn-gnus")
-(load "akn-muse-stuff")
 (load "akn-dev")
 (load "akn-keys")
 (load "akn-custom")
+
+(autoload 'rust-mode "rust-mode" nil t)
 
 ;; change for win32
 (setq custom-file (concat akn-config-dir "/" "akn-custom.el"))

@@ -30,9 +30,9 @@
 (add-to-list 'auto-mode-alist '("\\.wsdl\\|.xsd" . sgml-mode))
 (add-to-list 'auto-mode-alist '("\\.rc\\'" . c-mode))
 (add-to-list 'auto-mode-alist '("\\.mak" . makefile-mode))
-;(add-to-list 'auto-mode-alist '("\\.muse" . muse-mode))
 (add-to-list 'auto-mode-alist '("\\.bin" . hexl-mode))
 (add-to-list 'auto-mode-alist '("\\.js" . javascript-mode))
+(add-to-list 'auto-mode-alist '("\\.rs" . rust-mode))
 
 ;; Ispell
 (setq ispell-program-name "aspell"
