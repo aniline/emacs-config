@@ -7,6 +7,7 @@
 (require 'haskell-mode-autoloads)
 (require 'groovy-mode)
 (require 'gtags)
+(require 'smart-mode-line)
 
 ;; Some Settings
 (cond (window-system (mwheel-install)))
@@ -26,11 +27,14 @@
 (tool-bar-mode 0)
 
 ;; Automode list
+(autoload 'rust-mode "rust-mode" nil t)
+
+;;
 (add-to-list 'auto-mode-alist '("/mutt" . mail-mode))
 (add-to-list 'auto-mode-alist '("\\.wsdl\\|.xsd" . sgml-mode))
 (add-to-list 'auto-mode-alist '("\\.rc\\'" . c-mode))
 (add-to-list 'auto-mode-alist '("\\.mak" . makefile-mode))
-;(add-to-list 'auto-mode-alist '("\\.muse" . muse-mode))
+(add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
 (add-to-list 'auto-mode-alist '("\\.bin" . hexl-mode))
 (add-to-list 'auto-mode-alist '("\\.js" . javascript-mode))
 
@@ -79,3 +83,6 @@
 			(mode . c-mode)
 			))
 	       ))))
+;; Powerline
+(setq sml/theme 'powerline)
+(sml/setup)

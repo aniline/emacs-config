@@ -6,6 +6,14 @@
       org-alphabetical-lists t
       org-export-htmlize-output-type 'css)
 
+;; Org-mime, HTML mail.
+(load "/usr/share/org-mode/lisp/org-mime.el")
+(require 'org-mime)
+
+;; Fancy bullets.
+(require 'org-bullets)
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+
 (defconst akn-export-html-style "
 <style>
  <!--/*--><![CDATA[/*><!--*/

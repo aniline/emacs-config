@@ -1,13 +1,23 @@
 ;;; The main .emacs file.
  
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 (defvar running-xemacs (string-match "XEmacs\\|Lucid" emacs-version))
 (defvar running-win32 (string-match "mingw\\|nt" (emacs-version)) "Are we running win32")
 (defconst akn-config-dir "~/.emacs-config")
 
 (add-to-list 'load-path akn-config-dir)
 (add-to-list 'load-path "~/src/elisp")
+(add-to-list 'load-path "~/src/elisp/rust-mode")
 (add-to-list 'load-path "~/src/elisp/haskell-mode")
 (add-to-list 'load-path "~/src/elisp/Emacs-Groovy-Mode")
+(add-to-list 'load-path "~/src/elisp/smart-mode-line")
+(add-to-list 'load-path "~/src/elisp/powerline")
 
 ;; Set constants and machine stuff
 (setq akn-host-specific-file-name (concat "akn-host-" (system-name) ".el"))
@@ -21,7 +31,6 @@
 (load "akn-funcs")
 (load "akn-erc")
 (load "akn-gnus")
-(load "akn-muse-stuff")
 (load "akn-dev")
 (load "akn-keys")
 (load "akn-custom")

@@ -109,6 +109,9 @@
 (add-hook 'c-mode-hook '(lambda () (define-key c-mode-map (kbd "C-c C-v C-c") 'compile)))
 (add-hook 'c-mode-hook 'hs-minor-mode)
 (add-hook 'c-mode-hook 'auto-fill-mode)
+(add-hook 'c++-mode-hook '(lambda () (define-key c++-mode-map (kbd "C-c C-v C-c") 'compile)))
+(add-hook 'c++-mode-hook 'hs-minor-mode)
+(add-hook 'c++-mode-hook 'auto-fill-mode)
 
 ;; Not used (setq global-senator-minor-mode t)
 
