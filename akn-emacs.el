@@ -35,6 +35,8 @@
 (load "akn-keys")
 (load "akn-custom")
 
+(autoload 'rust-mode "rust-mode" nil t)
+
 ;; change for win32
 (setq custom-file (concat akn-config-dir "/" "akn-custom.el"))
 
