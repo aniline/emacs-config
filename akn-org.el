@@ -7,7 +7,6 @@
       org-export-htmlize-output-type 'css)
 
 ;; Org-mime, HTML mail.
-(load "/usr/share/org-mode/lisp/org-mime.el")
 (require 'org-mime)
 
 ;; Fancy bullets.

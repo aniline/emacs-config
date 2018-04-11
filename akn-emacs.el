@@ -1,17 +1,18 @@
 ;;; The main .emacs file.
- 
+(defconst akn-config-dir "~/.emacs-config")
+(add-to-list 'load-path akn-config-dir)
 
+;; This is the proper place for this, they say.
+(load "akn-custom")
+
+(defvar running-xemacs (string-match "XEmacs\\|Lucid" emacs-version))
+(defvar running-win32 (string-match "mingw\\|nt" (emacs-version)) "Are we running win32")
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-(defvar running-xemacs (string-match "XEmacs\\|Lucid" emacs-version))
-(defvar running-win32 (string-match "mingw\\|nt" (emacs-version)) "Are we running win32")
-(defconst akn-config-dir "~/.emacs-config")
-
-(add-to-list 'load-path akn-config-dir)
 (add-to-list 'load-path "~/src/elisp")
 (add-to-list 'load-path "~/src/elisp/rust-mode")
 (add-to-list 'load-path "~/src/elisp/haskell-mode")
@@ -33,7 +34,6 @@
 (load "akn-gnus")
 (load "akn-dev")
 (load "akn-keys")
-(load "akn-custom")
 
 (autoload 'rust-mode "rust-mode" nil t)
 

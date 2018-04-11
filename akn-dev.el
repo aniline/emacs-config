@@ -115,3 +115,9 @@
 
 ;; Not used (setq global-senator-minor-mode t)
 
+;; Lambda -> lambda
+(defun sm-greek-lambda ()
+  (font-lock-add-keywords nil
+			  `(("\\<lambda\\>" (0 (progn (compose-region (match-beginning 0) (match-end 0) ,(make-char 'greek-iso8859-7 107))
+						      nil))))))
+(add-hook 'inferior-scheme-mode-hook 'sm-greek-lambda)
