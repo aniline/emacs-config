@@ -1,13 +1,16 @@
 ;; Standard stuff
 (require 'ibuffer)
-(require 'cl)
-(require 'bbdb)
+;; (require 'cl)
+;; (require 'bbdb)
 (require 'fortune)
 (require 'generic-x)
 (require 'haskell-mode-autoloads)
 (require 'groovy-mode)
 (require 'gtags)
 (require 'smart-mode-line)
+(require 'toml-mode)
+(require 'qrencode)
+(require 'package)
 
 ;; Some Settings
 (cond (window-system (mwheel-install)))
@@ -25,6 +28,7 @@
 
 (toggle-case-fold-search)
 (tool-bar-mode 0)
+(savehist-mode 1)
 
 ;; Automode list
 (autoload 'rust-mode "rust-mode" nil t)
@@ -34,10 +38,11 @@
 (add-to-list 'auto-mode-alist '("\\.wsdl\\|.xsd" . sgml-mode))
 (add-to-list 'auto-mode-alist '("\\.rc\\'" . c-mode))
 (add-to-list 'auto-mode-alist '("\\.mak" . makefile-mode))
-(add-to-list 'auto-mode-alist '("\\.bin" . hexl-mode))
+(add-to-list 'auto-mode-alist '("\\.bin$" . hexl-mode))
 (add-to-list 'auto-mode-alist '("\\.js" . javascript-mode))
 (add-to-list 'auto-mode-alist '("\\.rs" . rust-mode))
-
+(add-to-list 'auto-mode-alist '("\\.rs" . rust-mode))
+(add-to-list 'auto-mode-alist '("\\.toml" . toml-mode))
 ;; Ispell
 (setq ispell-program-name "aspell"
       ispell-extra-args '("--sug-mode=ultra"))
@@ -86,3 +91,15 @@
 ;; Powerline
 (setq sml/theme 'powerline)
 (sml/setup)
+
+;; Use-package
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+(eval-and-compile
+  (setq use-package-always-ensure t
+        use-package-expand-minimally t))
+
+(use-package typescript-mode
+  :mode ("\\.tsx?\\'" . typescript-mode))

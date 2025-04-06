@@ -25,5 +25,6 @@
 
 ;; GTAGS
 
-(global-set-key (kbd "M-*") 'gtags-pop-stack)
-(global-set-key (kbd "M-.") 'gtags-find-tag)
+(global-set-key (kbd "M-*") 'xref-pop-marker-stack)
+;; (global-set-key (kbd "M-*") 'gtags-pop-stack)
+;; (global-set-key (kbd "M-.") 'gtags-find-tag)

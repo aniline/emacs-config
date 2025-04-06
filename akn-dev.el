@@ -105,6 +105,13 @@
 ;; ID utils
 (autoload 'gid "idutils")
 
+;; LSP mode
+(setq lsp-clangd-binary-path "/usr/bin/clangd"
+      lsp-clients-clangd-executable "/usr/bin/clangd"
+      lsp-clients-clangd-args '("--enable-config" "--query-driver=/usr/bin/g++")
+      lsp-java-server-install-dir "/mnt/Vol2/garage/src/eclipse.jdt.ls/org.eclipse.jdt.ls.product/target/repository/")
+(require 'lsp-mode)
+
 ;; Extras
 (add-hook 'c-mode-hook '(lambda () (define-key c-mode-map (kbd "C-c C-v C-c") 'compile)))
 (add-hook 'c-mode-hook 'hs-minor-mode)
@@ -112,6 +119,11 @@
 (add-hook 'c++-mode-hook '(lambda () (define-key c++-mode-map (kbd "C-c C-v C-c") 'compile)))
 (add-hook 'c++-mode-hook 'hs-minor-mode)
 (add-hook 'c++-mode-hook 'auto-fill-mode)
+(add-hook 'c++-mode-hook #'lsp-deferred)
+(add-hook 'c-mode-hook #'lsp-deferred)
+(add-hook 'typescript-mode-hook #'lsp-deferred)
+(add-hook 'java-mode-hook #'lsp-deferred)
+
 
 ;; Not used (setq global-senator-minor-mode t)
 
@@ -121,3 +133,7 @@
 			  `(("\\<lambda\\>" (0 (progn (compose-region (match-beginning 0) (match-end 0) ,(make-char 'greek-iso8859-7 107))
 						      nil))))))
 (add-hook 'inferior-scheme-mode-hook 'sm-greek-lambda)
+
+
+(setq plantuml-jar-path "/usr/share/plantuml/plantuml.jar")
+(setq plantuml-default-exec-mode 'jar)

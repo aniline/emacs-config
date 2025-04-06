@@ -4,21 +4,18 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(c-default-style
-   (quote
-    ((c-mode . "work")
-     (c++-mode . "k&r")
+   '((c-mode . "work")
+     (c++-mode . "work")
      (java-mode . "java")
      (awk-mode . "awk")
-     (other . "gnu"))))
+     (other . "gnu")))
  '(custom-safe-themes
-   (quote
-    ("2b74e86510c833e92488a42c4214645b6c9d4b63ae2255ba0818bf242e80712a" default)))
+   '("2b74e86510c833e92488a42c4214645b6c9d4b63ae2255ba0818bf242e80712a" default))
  '(epg-debug nil)
- '(haskell-mode-hook (quote (turn-on-haskell-indent)))
+ '(haskell-mode-hook '(turn-on-haskell-indent))
  '(ibuffer-display-summary nil)
  '(ibuffer-formats
-   (quote
-    ((mark modified read-only " "
+   '((mark modified read-only " "
            (name 18 18 :left :elide)
            " "
            (size 9 -1 :right)
@@ -27,11 +24,10 @@
            " " filename)
      (mark " "
            (name 16 -1)
-           " " filename))))
- '(ibuffer-saved-filter-groups nil)
+           " " filename)))
+ '(ibuffer-saved-filter-groups nil t)
  '(ibuffer-saved-filters
-   (quote
-    (("html5"
+   '(("html5"
       ((or
         (mode . html-mode)
         (mode . css-mode)
@@ -51,10 +47,9 @@
         (mode . gnus-summary-mode)
         (mode . gnus-article-mode))))
      ("programming"
-      (mode . c-mode)))))
+      (mode . c-mode))))
  '(ibuffer-saved-limits
-   (quote
-    (("work"
+   '(("work"
       ((or
         (mode . java-mode)
         (mode . c-mode)
@@ -73,11 +68,13 @@
         (mode . c-mode)
         (mode . java-mode)
         (mode . idl-mode)
-        (mode . lisp-mode)))))))
+        (mode . lisp-mode))))))
  '(indent-tabs-mode nil)
- '(org-babel-load-languages (quote ((plantuml . t))))
- '(org-bullets-bullet-list (quote ("◉" "◎" "●" "○")))
+ '(org-babel-load-languages '((plantuml . t)))
+ '(org-bullets-bullet-list '("◉" "◎" "●" "○"))
  '(org-plantuml-jar-path "/usr/share/plantuml/plantuml.jar")
+ '(package-selected-packages
+   '(lsp-java typescript-mode yaml-mode xref use-package tabbar session qml-mode pod-mode muttrc-mode mutt-alias lsp-mode initsplit htmlize graphviz-dot-mode go-mode folding eproject diminish dash-functional csv-mode company color-theme-modern cmake-mode browse-kill-ring boxquote bm bar-cursor apache-mode))
  '(sml/show-eol t)
  '(woman-fill-column 112))
 (custom-set-faces
@@ -106,7 +103,7 @@
  '(info-menu-star ((((class color)) (:foreground "Orange"))))
  '(info-xref ((((class color) (background dark)) (:foreground "cyan"))))
  '(isearch ((((class color) (background dark)) (:background "PeachPuff" :foreground "DarkGreen"))))
- '(message-cited-text ((((class color) (background dark)) (:foreground "orange"))))
+ '(message-cited-text ((((class color) (background dark)) (:foreground "orange"))) t)
  '(message-header-cc ((t (:foreground "turquoise3" :weight bold))))
  '(message-header-name ((((class color) (background dark)) (:foreground "turquoise"))))
  '(message-header-other ((((class color) (background dark)) (:foreground "#ff8040"))))

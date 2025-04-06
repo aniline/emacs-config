@@ -79,3 +79,8 @@ Uses `current-date-time-format' for the formatting the date/time."
   (save-excursion
     (let ((text (delete-and-extract-region start end)))
       (insert (url-unhex-string text)))))
+
+(require 'ansi-color)
+(defun display-ansi-colors ()
+  (interactive)
+  (ansi-color-apply-on-region (point-min) (point-max)))
